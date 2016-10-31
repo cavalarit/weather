@@ -1,0 +1,21 @@
+<!--<img class="icon" ng-src="{{ info.icon }}"> 
+<h2 class="title">{{ info.title }}</h2> 
+<p class="developer">{{ info.developer }}</p> 
+<p class="price">{{ info.price | currency }}</p>
+
+    <h2>Recent Photos</h2>
+    <div class="row">
+      <div class="item col-md-4" ng-repeat="photo in photos">
+        <a href="#/photos/{{$index}}">
+          <img class="img-responsive" ng-src="{{ photo.url }}">
+          <p class="author">by {{ photo.author }}</p>
+        </a>
+      </div>
+    </div>-->
+  
+    <a href="#/"><img class="icon" ng-src="{{ detail.url }}"></a>
+    <h2 class="photo-title"> {{ detail.title }} </h2>
+    <p class="photo-author"> {{ detail.author }} </p>
+    <p class="photo-views"> {{ detail.views }} </p>
+    <p class="photo-upvotes"> {{ detail.upvotes | number }} </p>
+    <p class="photo-pubdate"> {{ detail.pubdate | date }} </p>
