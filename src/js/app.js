@@ -27,6 +27,7 @@ app.controller('PhotoController', ['$scope', '$routeParams', function($scope, $r
 }]);
 
 app.controller('HomeController', ['$scope', function($scope) {
+
     $scope.photos = [
                         {
                             title: 'Servidores',
@@ -78,3 +79,11 @@ app.controller('HomeController', ['$scope', function($scope) {
                         }*/
                     ];
 }]);
+
+  /*$('.list-group-item').on('click',function(e){
+    alert("Entoru");
+    var previous = $(this).closest(".list-group").children(".active");
+    previous.removeClass('active'); // previous list-item
+    $(e.target).addClass('active'); // activated list-item
+  });*/    
+    
