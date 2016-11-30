@@ -1,8 +1,48 @@
 angular.module('CGIApp.controllers.Main', [])
 
-.controller('MainController', function($scope){
+.controller('MainController', function($scope,$location){
     $scope.logo='images/logo.png';
     $scope.server='images/icon_server_3.png';
+    
+    $scope.nav = {};
+    /*$scope.nav.isActive = function(path) {
+        if(path === $location.path()){
+            alert("Entrou isActive");
+            var previous = $(this).closest(".list-group").children(".active");
+            previous.removeClass('active'); // previous list-item
+            $(path.target).addClass('active'); // activated list-ite            
+            return true;
+        }
+        
+        alert("Saiu do isActive");
+        
+        return false;
+    }*/
+    
+    /*$scope.nav.isActive = function(path) {
+        if(path === $location.path()){
+            alert("Entrou isActive");
+            var previous = $(this).closest(".list-group").children(".active");
+            previous.removeClass('active'); // previous list-item
+            $(path.target).addClass('active'); // activated list-ite            
+            return true;
+        }
+        
+        alert("Saiu do isActive");
+        
+        return false;
+    }*/
+    
+    $scope.nav.isActive = function (viewLocation) { 
+      return viewLocation === $location.path();
+    };     
+    
+    /*$scope.nav.select = function(i) {
+        $scope.nav.selected = i;
+    };
+    $scope.nav.isActive = function(item) {
+        return $scope.nav.selected === item;
+    };*/    
   
     $scope.apps = [ 
                 { 

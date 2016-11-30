@@ -5,8 +5,8 @@ var app = angular.module('CGIApp', [
 ])
 
 app.config(function($routeProvider) {
-  $routeProvider.when('/', {templateUrl:'home.html',  reloadOnSearch: false})
-                .when('/examples', {templateUrl:'examples.html',  reloadOnSearch: false})
+  $routeProvider.when('/', {templateUrl:'home.html',  reloadOnSearch: false })
+                .when('/examples', {templateUrl:'examples.html' })
                 .when('/photos/:id', {
 			controller: 'PhotoController',
                         templateUrl: 'appInfo.html'});
